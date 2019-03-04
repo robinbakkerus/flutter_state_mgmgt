@@ -30,12 +30,6 @@ class _ListDisplay extends State<ListDisplay> {
     CardEvents.onCardTabbed((e) => _fetchTotalScore());
   }
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _fetchTotalScore();
-  // }
-  
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -76,9 +70,9 @@ class _ListDisplay extends State<ListDisplay> {
     setState(() {
       _totalScore = _cardsBloc.totalScore();
     });
-    if (_getDetailCard() != null) {
-      CardEvents.fireCardSetState(_getDetailCard().cardData);
-    }
+  //   if (_getDetailCard() != null) {
+  //     CardEvents.fireCardSetState(_getDetailCard().cardData);
+  //   }
   }
 
   List<CardWg> _getAllCards() => _cardsBloc.fetchAllCards();
