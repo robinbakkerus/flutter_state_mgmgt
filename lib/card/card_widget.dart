@@ -39,7 +39,7 @@ class _CardWgState extends State<CardWg> with AutomaticKeepAliveClientMixin {
   void _handleEvent(CardSetStateEvent event) {
     if (mounted) {
       setState(() {
-        if (widget.cardData.detail || event.cardData.nr == widget.cardData.nr ) {
+        if (widget.cardData.isDetail || event.cardData.nr == widget.cardData.nr ) {
           _score = event.cardData.score;
         } 
       });
